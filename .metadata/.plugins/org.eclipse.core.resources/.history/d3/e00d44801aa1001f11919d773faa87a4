@@ -1,0 +1,23 @@
+package Day_02;
+import java.util.Scanner;
+public class Employeetakehome {
+	
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	double basicsalary = scan.nextDouble();
+	double taxrate = scan.nextDouble();
+	double PF = scan.nextDouble();
+	double bonus = scan.nextDouble();
+	double BOA = scan.nextDouble();
+	double yearlygross = scan.nextDouble();
+	
+	
+	PF = basicsalary * 0.12;
+	double Monthlygross = (basicsalary + BOA + bonus)- PF;
+    yearlygross =  	Monthlygross * 12 ;
+    double yearlytax = yearlygross * taxrate;
+    double monthlytax = yearlytax/12;
+    double monthlytakehome = Monthlygross - monthlytax;
+}
+
+}

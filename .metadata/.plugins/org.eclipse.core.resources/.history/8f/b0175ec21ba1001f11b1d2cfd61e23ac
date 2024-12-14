@@ -1,0 +1,38 @@
+package Day_02;
+import java.util.Scanner;
+
+public class Employeetakehome
+{
+	String Employeename;
+	double basicsalary,taxrate,bonus,BOA,yearlygross, yearlytax,Monthlygross,monthlytax,monthlytakehome;
+	double PF=0.12;
+	int Empoyeelevel;
+	
+ public static void main(String[] args)
+ {
+	Scanner scan = new Scanner(System.in);
+	
+	Employeetakehome Emp = new Employeetakehome();
+	System.out.println("Enter Employee Basic salary");
+	Emp.basicsalary = scan.nextDouble();
+	System.out.println("Enter employee bonus");
+	Emp.bonus = scan.nextDouble();
+	System.out.println("Entera Empolyee BOA");
+	Emp.BOA = scan.nextDouble();
+	
+	Emp.PF = basicsalary * 0.12;
+	
+}
+	
+	double Monthlygross() {
+		
+		Monthlygross = (basicsalary + BOA + bonus)- PF;
+		return Monthlygross;
+	}
+	
+	double yealyGross() {
+		
+		yearlygross =  	Monthlygross * 12 ;
+	}
+
+}
